@@ -5,6 +5,9 @@ class Sandwichshop {
         this.name = name
         this.city_id = city_id
         this.city = city
+        this.element = document.createElement('li');
+        this.element.dataset['id'] = id; 
+        this.element.id = `sandwichshop-${id}`;
     }
-    
+
 }
