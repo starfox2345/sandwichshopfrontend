@@ -6,4 +6,5 @@ class Sandwichshop {
         this.city_id = city_id
         this.city = city
     }
+    
 }
