@@ -36,7 +36,7 @@ class Sandwichshop {
             this.createEditForm()
         }else if(e.target.innerText === "Delete"){
             console.log(e.target)
-
+            sandwichshopCall.deleteSandwichshop(e)
         }else if(e.target.innerText === "Save Sandwichshop"){
             console.log("save works")
             e.target.innerText = "Edit Sandwichshop"
