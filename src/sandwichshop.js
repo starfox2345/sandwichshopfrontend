@@ -43,7 +43,11 @@ class Sandwichshop {
 
     createEditForm(){
         const div = this.element.querySelector('div');
-        
+        for(const element of div.children){
+            let inputValue = element.innerText;
+            let name = element.classList(0)
+            element.outerHTML = `<input type="text" class="edit-${name}" value="${inputValue}"`
+        }
         debugger
     }
 
