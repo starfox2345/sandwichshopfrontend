@@ -42,7 +42,7 @@ class SandwichshopService {
     }
 
     updateSandwichshop(sandwichshop){
-        const {name, description} = sandwichshop
+        const {name, description, id} = sandwichshop
         const sandwichshopInfo = {
             name,
             description
@@ -56,10 +56,17 @@ class SandwichshopService {
             },
             body: JSON.stringify(sandwichshopInfo)
 
-            }
         }
-        
         debugger
+        fetch("http://localhost:3000/sandwichshops/${id}", configObject)
+        .then(resp => resp.json())
+        .then(data => {
+            // const s = new Sandwichshop(data)
+            sandwichshop.attachToDom()
+        })
+        
+        
+        
     }
 }
 

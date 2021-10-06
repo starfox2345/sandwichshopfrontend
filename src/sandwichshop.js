@@ -58,7 +58,7 @@ class Sandwichshop {
         this.name = this.element.querySelector(".edit-name").value;
         this.description = this.element.querySelector(".edit-description").value;
         sandwichshopCall.updateSandwichshop(this)
-        debugger
+        
     }
 
     attachToDom(){
