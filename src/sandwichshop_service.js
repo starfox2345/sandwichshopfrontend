@@ -42,6 +42,12 @@ class SandwichshopService {
     }
 
     updateSandwichshop(sandwichshop){
+        const {name, description} = sandwichshop
+        const sandwichshopInfo = {
+            name,
+            description
+        }
+
         
         debugger
     }
