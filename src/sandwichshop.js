@@ -27,15 +27,20 @@ class Sandwichshop {
         `
         return this.element
     }
-    handleClick(e){
+    handleClick = (e) => {
         if(e.target.innerText === "Edit Sandwichshop"){
             console.log(e.target)
+            this.createEditForm()
         }else if(e.target.innerText === "Delete"){
             console.log(e.target)
 
         }else if(e.target.innerText === "Save Sandwichshop"){
 
         }
+    }
+
+    createEditForm(){
+        
     }
 
     attachToDom(){
