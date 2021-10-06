@@ -30,12 +30,15 @@ class SandwichshopService {
                 "Content-Type": "application/json",
                 Accept: "application/json"                
             },
-            body: JSON.stringify()
+            body: JSON.stringify(sandwichshopInfo)
         }
         
-        fetch("http://localhost:3000/sandwichshops")
+        fetch("http://localhost:3000/sandwichshops", configObject)
         .then(resp => resp.json())
-        .then(data => console.log(data))
+        .then(data => {
+            const s = new Sandwichshop(data)
+            s.attachToDom()
+        })
     }
 
 }
