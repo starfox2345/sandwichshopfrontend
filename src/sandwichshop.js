@@ -39,6 +39,8 @@ class Sandwichshop {
 
         }else if(e.target.innerText === "Save Sandwichshop"){
             console.log("save works")
+            e.target.innerText = "Edit Sandwichshop"
+            this.updatedInfo()
         }
     }
 
@@ -50,6 +52,12 @@ class Sandwichshop {
             element.outerHTML = `<input type="text" class="edit-${name}" value="${inputValue}"/>`
         }
         
+    }
+
+    updatedInfo(){
+        this.name = this.element.querySelector(".edit-name").value;
+        this.description = this.element.querySelector(".edit-description").value;
+        debugger
     }
 
     attachToDom(){
