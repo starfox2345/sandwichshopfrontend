@@ -32,13 +32,13 @@ class Sandwichshop {
     handleClick = (e) => {
         if(e.target.innerText === "Edit Sandwichshop"){
             console.log(e.target)
-            
+            e.target.innerText = "Save Sandwichshop"
             this.createEditForm()
         }else if(e.target.innerText === "Delete"){
             console.log(e.target)
 
         }else if(e.target.innerText === "Save Sandwichshop"){
-
+            console.log("save works")
         }
     }
 
