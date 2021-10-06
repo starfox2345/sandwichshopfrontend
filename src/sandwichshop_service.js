@@ -59,14 +59,8 @@ class SandwichshopService {
         }
         
         fetch(this.port + `/sandwichshops/${id}`, configObject)
-        .then(resp => resp.json())
-        .then(data => {
-            // const s = new Sandwichshop(data)
-            sandwichshop.render()
-        })
-        
-        
-        
+        .then(resp => {sandwichshop.render()})
+ 
     }
 
     deleteSandwichshop(e){
