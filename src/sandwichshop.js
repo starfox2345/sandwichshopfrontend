@@ -32,6 +32,7 @@ class Sandwichshop {
     handleClick = (e) => {
         if(e.target.innerText === "Edit Sandwichshop"){
             console.log(e.target)
+            
             this.createEditForm()
         }else if(e.target.innerText === "Delete"){
             console.log(e.target)
@@ -45,10 +46,10 @@ class Sandwichshop {
         const div = this.element.querySelector('div');
         for(const element of div.children){
             let inputValue = element.innerText;
-            let name = element.classList(0)
-            element.outerHTML = `<input type="text" class="edit-${name}" value="${inputValue}"`
+            let name = element.classList[0];
+            element.outerHTML = `<input type="text" class="edit-${name}" value="${inputValue}"/>`
         }
-        debugger
+        
     }
 
     attachToDom(){
