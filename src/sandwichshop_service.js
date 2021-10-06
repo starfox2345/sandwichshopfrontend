@@ -59,7 +59,7 @@ class SandwichshopService {
         }
         
         fetch(this.port + `/sandwichshops/${id}`, configObject)
-        .then(resp => {sandwichshop.render()})
+        .then(() => {sandwichshop.render()})
  
     }
 
