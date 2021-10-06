@@ -21,9 +21,11 @@ class Sandwichshop {
         <div data-id="${this.id}">
         <h2 class="name">${this.name}</h2>
         <p class="description">${this.description}</p>
+        </div>
+
         <button class="edit" data-id=${this.id}>Edit Sandwichshop</button>
         <button class="delete" data-id=${this.id}>Delete</button>
-        </div>
+        
         `
         return this.element
     }
@@ -40,7 +42,9 @@ class Sandwichshop {
     }
 
     createEditForm(){
+        const div = this.element.querySelector('div');
         
+        debugger
     }
 
     attachToDom(){
