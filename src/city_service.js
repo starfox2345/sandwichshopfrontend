@@ -9,7 +9,7 @@ class CityService {
         .then(json => {
             json.forEach(element => {
                 const c = new City(element)
-                
+                c.addToDropDown()
             })
         })
     }

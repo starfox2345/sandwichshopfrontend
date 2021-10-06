@@ -4,6 +4,7 @@ const cityCall = new CityService(port);
 const form = document.getElementById("sandwichshop-form");
 const dropDown = document.getElementById("city-dropdown");
 const nameValue = document.getElementById('sandwichshop-name');
+const descriptionValue = document.getElementById('sandwichshop-description');
 
 sandwichshopCall.getSandwichshops()
 cityCall.getCities()
