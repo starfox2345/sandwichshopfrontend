@@ -9,8 +9,8 @@ class SandwichshopService {
         .then(resp => resp.json())
         .then(data => {
             for(const sandwichshop of data){
-                let c = new Sandwichshop(sandwichshop)
-                c.attachToDom()
+                let s = new Sandwichshop(sandwichshop)
+                s.attachToDom()
             }
         })
         .catch()

@@ -1,5 +1,6 @@
 class Sandwichshop {
     static all = [];
+    static cont = document.getElementById("sandwichshops-cont")
     constructor({description, id, name, city_id, city}){
         this.description = description
         this.id = id
@@ -17,10 +18,15 @@ class Sandwichshop {
         this.element.innerHTML = `
         <div data-id="${this.id}">
         <h2 class="name">${this.name}</h2>
-        <p class="description">${this.description}}</p>
+        <p class="description">${this.description}</p>
         </div>
         `
         return this.element
+    }
+
+    attachToDom(){
+        
+        Sandwichshop.cont.appendChild(this.render())
     }
 
 }
