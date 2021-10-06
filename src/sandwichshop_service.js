@@ -24,7 +24,15 @@ class SandwichshopService {
                 city_id: dropDown.value
             }
         }
-        debugger
+        const configObject = {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"                
+            },
+            body: JSON.stringify()
+        }
+        
         fetch("http://localhost:3000/sandwichshops")
         .then(resp => resp.json())
         .then(data => console.log(data))
