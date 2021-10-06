@@ -7,7 +7,10 @@ class CityService {
         fetch(`${this.port}/cities`)
         .then(resp => resp.json())
         .then(json => {
-            debugger
+            json.forEach(element => {
+                const c = new City(element)
+                
+            })
         })
     }
 }
