@@ -17,7 +17,17 @@ class SandwichshopService {
     }
 
     createSandwichshops(){
-        
+        const sandwichshopInfo = {
+            sandwichshop: {
+                name: nameValue.value,
+                description: descriptionValue.value,
+                city_id: dropDown.value
+            }
+        }
+        debugger
+        fetch("http://localhost:3000/sandwichshops")
+        .then(resp => resp.json())
+        .then(data => console.log(data))
     }
 
 }
