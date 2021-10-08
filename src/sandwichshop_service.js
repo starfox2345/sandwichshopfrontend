@@ -40,6 +40,13 @@ class SandwichshopService {
             const s = new Sandwichshop(data)
             // const s = new Sandwichshop({id:json.data.id, ...json.data.attributes})
             const cit = City.all.find(c => parseInt(c.id) === s.city_id)
+            if(!cit){
+                
+                let citObj = new City({id: json.data.attributes.city_id, name: json.data.attributes.city_name})
+                // citObj.addToDom()
+                citObj.addToDropDown()
+
+            }
             s.attachToDom()
         })
     }

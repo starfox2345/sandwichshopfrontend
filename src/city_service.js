@@ -9,6 +9,8 @@ class CityService {
         .then(json => {
             json.forEach(element => {
                 const c = new City(element)
+                // const c = new City({id: element.id, ...element.attributes})
+                // c.addToDom()
                 c.addToDropDown()
             })
         })
