@@ -16,6 +16,22 @@ class Sandwichshop {
         
     }
 
+    static filteredByCity(filteredCity){
+        if(filteredCity){
+            for(const i of Sandwichshop.all){
+                if(i.city_id === parseInt(filteredCity.id)){
+                    i.element.style.display = ""
+                } else{
+                    i.element.style.display = "none"
+                }
+            }
+        } else{
+            for(const i of Sandwichshop.all){
+                i.element.style.display = ""
+            }
+        }
+    }
+
     render(){
         this.element.innerHTML = `
         <div data-id="${this.id}">

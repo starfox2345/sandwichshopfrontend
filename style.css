@@ -1,3 +1,10 @@
 body {
     background-color: orange;
 }
+
+.activated {
+    background-color: rgb(220, 20, 15);
+    border-radius: 0px 5px 5px 0px;
+    border: 1px solid;
+    color: blueviolet
+}

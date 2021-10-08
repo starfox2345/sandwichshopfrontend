@@ -21,7 +21,8 @@ class SandwichshopService {
             sandwichshop: {
                 name: nameValue.value,
                 description: descriptionValue.value,
-                city_id: dropDown.value
+                // city_id: dropDown.value
+                city_name: cityInput.value
             }
         }
         const configObject = {
