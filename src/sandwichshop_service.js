@@ -38,6 +38,8 @@ class SandwichshopService {
         .then(resp => resp.json())
         .then(data => {
             const s = new Sandwichshop(data)
+            // const s = new Sandwichshop({id:json.data.id, ...json.data.attributes})
+            const cit = City.all.find(c => parseInt(c.id) === s.city_id)
             s.attachToDom()
         })
     }
