@@ -53,10 +53,10 @@ class City {
     }
 
     addToDropDown(){
-        const option = document.createElement('option');
+        const option = document.createElement('option')
         option.value = this.id
         option.innerText = this.name
-        dropDown.appendChild(option)
+        dropDown.append(option)
     }
 }
 
