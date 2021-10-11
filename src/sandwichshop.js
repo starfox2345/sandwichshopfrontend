@@ -1,6 +1,6 @@
 class Sandwichshop {
     static all = [];
-    static cont = document.getElementById("sandwichshops-cont")
+    static container = document.getElementById("sandwichshops-container");
     constructor({description, id, name, city_id, city}){
         this.description = description
         this.id = id
@@ -45,6 +45,11 @@ class Sandwichshop {
         `
         return this.element
     }
+
+    renderSandwichshop(){
+        Sandwichshop.container.appendChild(this.render())
+    }
+
     handleClick = (e) => {
         if(e.target.innerText === "Edit Sandwichshop"){
             console.log(e.target)
@@ -79,7 +84,7 @@ class Sandwichshop {
 
     attachToDom(){
         
-        Sandwichshop.cont.appendChild(this.render())
+        Sandwichshop.container.appendChild(this.render())
     }
 
 }
