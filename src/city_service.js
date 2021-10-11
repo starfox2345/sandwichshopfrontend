@@ -1,16 +1,17 @@
 class CityService {
-    constructor(port){
-        this.port = port
-    }
 
-    getCities(){
-        fetch(`${this.port}/cities`)
+    constructor(port){
+        this.baseUrl = `${port}/cities`
+    }
+        
+
+    getcities(){
+        fetch(this.baseUrl)
         .then(resp => resp.json())
-        .then(json => {
-            json.forEach(element => {
-                const c = new City(element)
-                // const c = new City({id: element.id, ...element.attributes})
-                // c.addToDom()
+        .then( json => {
+            json["data"].forEach(element => {
+                const c = new City({id: element.id, ...element.attributes})
+                c.addToDom()
                 c.addToDropDown()
             })
         })
