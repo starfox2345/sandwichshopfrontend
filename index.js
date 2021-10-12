@@ -23,7 +23,6 @@
 
 // ----------------------------------------------------
 
-// form.addEventListener('submit', handleSubmit)
 
 const port = 'http://localhost:3000';
 const sandwichshopService = new SandwichshopService(port);
@@ -35,6 +34,7 @@ const form = document.getElementById('sandwichshop-form');
 const nameInput = document.getElementById('sandwichshop-name');
 const descriptionInput = document.getElementById('sandwichshop-description');
 const baseURL = 'http://localhost:3000/sandwichshops'
+form.addEventListener('submit', handleSubmit)
 
 function handleSubmit(e){
     e.preventDefault();
