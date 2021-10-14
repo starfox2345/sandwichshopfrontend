@@ -12,7 +12,7 @@ body {
 button {
     background-color: white;
     border-radius: 0px 5px 5px 0px;
-    border: 1px solid rgb(122, 186, 223);
+    border: 1px solid rgb(68, 77, 82);
     color: rgb(40, 160, 230);
     padding: 10px 20px;
     text-align: center;
@@ -21,7 +21,7 @@ button {
   }
   
   .activated {
-    background-color:rgb(97, 184, 235);
+    background-color:rgb(77, 199, 66);
     border-radius: 0px 5px 5px 0px;
     border: 1px solid;
     color: white;

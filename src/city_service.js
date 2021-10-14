@@ -5,12 +5,13 @@ class CityService {
     }
         
 
-    getcities(){
+    getCities(){
         fetch(this.baseUrl)
         .then(resp => resp.json())
         .then( json => {
-            json["data"].forEach(element => {
-                const c = new City({id: element.id, ...element.attributes})
+            
+            json.forEach(element => {
+                const c = new City(element)
                 c.addToDom()
                 c.addToDropDown()
             })
