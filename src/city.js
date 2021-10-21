@@ -1,4 +1,10 @@
 class City {
+// const searchBar = document.getElementById('searchBar');
+
+// console.log(searchBar);
+//     searchBar.addEventListener('keyup', (e) => {
+//         console.log(e);
+//     });
 
     static all = []
     static cityContainer = document.getElementById('city-container')
@@ -17,6 +23,7 @@ class City {
         City.all.push(this)
 
     }
+
 
     render(){
         this.element.innerText = this.name
@@ -59,4 +66,7 @@ class City {
         option.innerText = this.name
         dropDown.append(option)
     }
+
+
+
 }

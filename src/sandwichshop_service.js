@@ -6,7 +6,7 @@ class SandwichshopService {
     getSandwichshops(){
         // fetch(this.port + "/sandwichshops")
         fetch("http://localhost:3000/sandwichshops")
-        .then(resp => resp.json())
+        .then(f => f.json())
         .then(data => {
             for(const sandwichshop of data){
                 let s = new Sandwichshop(sandwichshop)
@@ -14,6 +14,7 @@ class SandwichshopService {
             }
         })
         .catch()
+        // console.log('hello')
     }
 
     createSandwichshops(){
@@ -41,7 +42,7 @@ class SandwichshopService {
             // const s = new Sandwichshop({id:json.data.id, ...json.data.attributes})
             const cit = City.all.find(c => parseInt(c.id) === s.city_id)
             if(!cit){
-                debugger
+                
                 let citObj = new City({id: data.attributes.city_id, name: data.attributes.city_name})
                 // citObj.addToDom()
                 citObj.addToDropDown()

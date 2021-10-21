@@ -1,4 +1,5 @@
 class Sandwichshop {
+
     static all = [];
     static container = document.getElementById('sandwichshop-list');
     constructor({description, id, name, city_id, city}){
@@ -29,6 +30,47 @@ class Sandwichshop {
             }
         }
     }
+
+    static filterBySandwichshop(filteredSandwichshops){
+        if(filteredSandwichshops) {
+            Sandwichshop.container.innerHTML = "";
+            for(const i of filteredSandwichshops) {
+                i.addToDom()
+            }
+        } else {
+            Sandwichshop.container.innerHTML = "";
+            for(const i of Sandwichshop.all) {
+                debugger
+                i.addToDom()
+            }
+        }
+    }
+
+    addToDom() {
+        Sandwichshop.container.appendChild(this.element)
+    }
+
+    // addToDom(){
+    //     Sandwichshop.sandwichshopContainer.append(this.render())
+        
+    //     this.addListeners()
+    // }
+
+    // static filteredBySandwichshop(filteredSandwichshop){
+    //     if(filteredSandwichshop){
+    //         for(const i of Sandwichshop.all){
+    //             if(i.sandwichshop.id === parseInt(filteredSandwichshop.id)){
+    //                 i.element.style.display = ""
+    //             } else{
+    //                 i.element.style.display = "none"
+    //             }
+    //         }
+    //     } else{
+    //         for(const i of Sandwichshop.all){
+    //             i.element.style.display = ""
+    //         }
+    //     }
+    // }
 
     render(){
         this.element.innerHTML = `
@@ -84,5 +126,10 @@ class Sandwichshop {
         
         Sandwichshop.container.appendChild(this.render())
     }
+
+    // attachToDom(){
+    //     this.renderToLi()
+    //     Sandwichshop.container.appendChild(this.element)
+    // }
 
 }
